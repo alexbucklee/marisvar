@@ -27,13 +27,13 @@ function browsersync() {
 
 function scripts() {
     return gulp.src([
-            'source/js/script.js',
             'source/js/swiper-bundle.min.js',
+            'source/js/script.js',
         ])
         .pipe(concat('script.min.js'))
         .pipe(uglify())
         .pipe(gulp.dest('source/js'))
-        .pipe(sync.stream());
+        .pipe(sync.stream())
 }
 
 // Styles
