@@ -12,7 +12,7 @@
 			<header class="page-header container">				
 				<nav class="page-header__main-nav main-nav">
 					<a class="page-header__logo">
-						<img class="page-header__logo-image" src="img/dest/images/svg/logo-image.svg" width="131" height="20" alt="Учебный центр «Профессионал»">
+						<img loading="lazy" class="page-header__logo-image" src="img/dest/images/svg/logo-image.svg" width="131" height="20" alt="Учебный центр «Профессионал»">
 	
 					</a>
 					<button class="main-nav__toggle" type="button">
@@ -168,7 +168,7 @@
 								srcset="img/dest/files/mobile/class-photo.webp">
 							<source
 								srcset="img/dest/files/mobile/class-photo.jpg">
-							<img class="organization__photo" src="img/dest/files/desktop/class-photo.jpg" alt="Учебный класс для проведения теоретических занятий">
+							<img loading="lazy" class="organization__photo" src="img/dest/files/desktop/class-photo.jpg" alt="Учебный класс для проведения теоретических занятий">
 						</picture>
 						<p class="organization__photo-caption">Класс обеспечен необходимым оборудованием для комфортного обучения.<br>
 						Студентам выдается специальная учебная литература.</p>
@@ -189,7 +189,7 @@
 								srcset="img/dest/files/mobile/workshop-photo.webp">
 							<source
 								srcset="img/dest/files/mobile/workshop-photo.jpg">
-							<img class="organization__photo" src="img/dest/files/desktop/workshop-photo.jpg" alt="Мастерская для проведения практических занятий">
+							<img loading="lazy" class="organization__photo" src="img/dest/files/desktop/workshop-photo.jpg" alt="Мастерская для проведения практических занятий">
 						</picture>
 						<p class="organization__photo-caption">В мастерской каждому студенту выделяется рабочее место, которое организовано по всем требованиям, и выдается специальная экипировка.</p>
 					</li>
@@ -237,10 +237,10 @@
 					<div class="standards__license">
 						<div class="license__wrapper">
 							<a class="license__link" href="">
-								<img class="license__photo" src="img/dest/files/thumbnails/360/license-1.jpg" alt="Лицензия ООО «Марисвар» на образовательную деятельность">
+								<img loading="lazy" class="license__photo" src="img/dest/files/thumbnails/360/license-1.jpg" alt="Лицензия ООО «Марисвар» на образовательную деятельность">
 							</a>
 							<a class="license__link" href="">
-								<img class="license__photo" src="img/dest/files/thumbnails/360/license-2.jpg" alt="Лицензия ООО «Марисвар» на образовательную деятельность">
+								<img loading="lazy" class="license__photo" src="img/dest/files/thumbnails/360/license-2.jpg" alt="Лицензия ООО «Марисвар» на образовательную деятельность">
 							</a>
 						</div>
 						<p class="license__text">Лицензия ООО "Марисвар" 12Л01 №0000201</p>
@@ -276,7 +276,7 @@
 											srcset="img/dest/files/mobile/author-photo-1.webp">
 										<source
 											srcset="img/dest/files/mobile/author-photo-1.jpg">
-										<img class="reviews__author-image" src="img/dest/files/desktop/author-photo-1.jpg" alt="Ирина Авдеева">
+										<img loading="lazy" class="reviews__author-image" src="img/dest/files/desktop/author-photo-1.jpg" alt="Ирина Авдеева">
 									</picture>
 									<div class="author-name__wrapper">
 										<figcaption class="reviews__author-name">Валентина Авдеева</figcaption>
@@ -321,7 +321,7 @@
 											srcset="img/dest/files/mobile/author-photo-1.webp">
 										<source
 											srcset="img/dest/files/mobile/author-photo-1.jpg">
-										<img class="reviews__author-image" src="img/dest/files/desktop/author-photo-1.jpg" alt="Ирина Авдеева">
+										<img loading="lazy" class="reviews__author-image" src="img/dest/files/desktop/author-photo-1.jpg" alt="Ирина Авдеева">
 									</picture>
 									<div class="author-name__wrapper">
 										<figcaption class="reviews__author-name">Валентина Авдеева</figcaption>
@@ -366,7 +366,7 @@
 											srcset="img/dest/files/mobile/author-photo-1.webp">
 										<source
 											srcset="img/dest/files/mobile/author-photo-1.jpg">
-										<img class="reviews__author-image" src="img/dest/files/desktop/author-photo-1.jpg" alt="Ирина Авдеева">
+										<img loading="lazy" class="reviews__author-image" src="img/dest/files/desktop/author-photo-1.jpg" alt="Ирина Авдеева">
 									</picture>
 									<div class="author-name__wrapper">
 										<figcaption class="reviews__author-name">Валентина Авдеева</figcaption>
@@ -436,9 +436,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="contacts__map">
-					<!-- <img src="img/dest/images/map.png" alt=""> -->
-					<script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Af12312a285cd6098f401e5e5ea4587b05d1cc7e8f27f035c07dfb8d927011d40&amp;width=100%25&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+				<div id="map" class="contacts__map">
 				</div>
 			</section>
 		</main>
@@ -452,4 +450,5 @@
 		</footer>
 	</body>
 	<script src="js/script.min.js"></script>
+
 </html>
