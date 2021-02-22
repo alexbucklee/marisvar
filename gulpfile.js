@@ -87,12 +87,12 @@ function buildcopy() {
     ], {
         base: 'source'
     })
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest('docs'));
 };
 
 
 function cleanbuild() {
-    return del('build/**/*', { force: true });
+    return del('docs/**/*', { force: true });
 };
 
 function smartwatch() {
