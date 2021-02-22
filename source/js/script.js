@@ -82,3 +82,17 @@ for (let anchor of anchors) (
         })
     })
 );
+
+function showmap() {
+    // console.log(scrollTop);
+
+    let standards = document.querySelector('.standards');
+    let standardsTop = standards.offsetTop;
+
+    if (window.pageYOffset > standardsTop) {
+        map.insertAdjacentHTML('afterbegin', '<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af12312a285cd6098f401e5e5ea4587b05d1cc7e8f27f035c07dfb8d927011d40&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>');
+        document.removeEventListener('scroll', showmap);
+    }
+}
+
+document.addEventListener('scroll', showmap);
