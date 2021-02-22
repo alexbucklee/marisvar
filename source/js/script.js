@@ -7,29 +7,24 @@ let navClose = document.querySelector('.main-nav__toggle--close');
 let pageOverlay = document.querySelector('.page__overlay');
 let pageBody = document.querySelector('.page__body');
 
-navToggle.addEventListener('click', function() {
+function openMenu() {
     navMain.classList.toggle('main-nav__display-none');
     pageOverlay.classList.toggle('page__overlay--show');
     navHamb.classList.toggle('display-none');
     navClose.classList.toggle('display-none');
     pageBody.classList.toggle('overflow-hidden');
-});
+};
 
-pageOverlay.addEventListener('click', function () {
-    navMain.classList.toggle('main-nav__display-none');
-    pageOverlay.classList.toggle('page__overlay--show');
-    navHamb.classList.toggle('display-none');
-    navClose.classList.toggle('display-none');
-    pageBody.classList.toggle('overflow-hidden');
-});
+navToggle.addEventListener('click', openMenu);
+
+pageOverlay.addEventListener('click', openMenu);
 
 // expand reviews
-
 
 let reviewsExpand = document.querySelectorAll('.reviews__button-expand');
 
 for (let i = 0; i < reviewsExpand.length; i++) {
-    reviewsExpand[i].addEventListener('click', function () {
+    reviewsExpand[i].addEventListener('click', function() {
         reviewsExpand[i].querySelector('.reviews__button-expand--open').classList.toggle('display-none');
         reviewsExpand[i].querySelector('.reviews__button-expand--close').classList.toggle('display-none');
         let reviewsText = this.previousElementSibling;
@@ -63,3 +58,27 @@ const swiper = new Swiper('.swiper-container', {
     }
     
 });
+
+// anchor
+
+const anchors = document.querySelectorAll('a[href*="#"]');
+
+for (let anchor of anchors) (
+    anchor.addEventListener('click', function(event) {
+        event.preventDefault();
+
+        
+        if (window.innerWidth < 1024) {
+            let mobileMenu = document.querySelector('.main-nav__wrapper');
+            if (mobileMenu.classList.contains('main-nav__display-none')) {} else {
+                openMenu()
+            }
+        }
+
+        const blockID = anchor.getAttribute('href')
+        document.querySelector('' + blockID).scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
+        })
+    })
+);

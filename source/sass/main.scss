@@ -115,7 +115,6 @@ img {
     font-weight: normal;
     font-size: 16px;
     line-height: 24px;
-    scroll-behavior: smooth;
 
     color: rgba($color: #000000, $alpha: 0.85);
 
@@ -1547,6 +1546,12 @@ img {
 
     @media (min-width: $w1024) {
         width: calc((100% - 24px * 11) / 12 * 7 + 24px * 6);
+    }
+
+    @media (min-width: $w1280) {
+        width: calc((100% - 32px * 11) / 12 * 7 + 32px * 6);
+        height: inherit;
+        min-height: 480px;
     }
 }
 
