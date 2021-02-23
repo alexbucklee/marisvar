@@ -1591,14 +1591,12 @@ img {
 }
 
 .contacts__map {
-    img {
-        display: block;
-        width: 100%;
-        min-height: 320px;
-    }
 
+    height: 320px;
     @media (min-width: $w768) {
         width: calc((100% - 24px * 7) / 8 * 4 + 24px * 3);
+        height: inherit;
+        min-height: 480px;
     }
 
     @media (min-width: $w1024) {
@@ -1607,8 +1605,6 @@ img {
 
     @media (min-width: $w1280) {
         width: calc((100% - 32px * 11) / 12 * 7 + 32px * 6);
-        height: inherit;
-        min-height: 480px;
     }
 }
 
