@@ -28,6 +28,7 @@ function browsersync() {
 function scripts() {
     return gulp.src([
             'source/js/swiper-bundle.min.js',
+            'source/js/modernizr-webp.js',
             'source/js/script.js',
         ])
         .pipe(concat('script.min.js'))

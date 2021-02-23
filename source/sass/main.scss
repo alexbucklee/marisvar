@@ -228,10 +228,21 @@ img {
     align-items: center;
 }
 
+.no-webp .page__header-image {    
+    background-image: url("../img/dest/images/header-image-mobile.jpg");
+
+    @media (min-width: $w768) {
+        background-image: url("../img/dest/images/header-image768.jpg");
+    }
+
+    @media (min-width: $w1024) {
+        background-image: url("../img/dest/images/header-image-1024.jpg");
+    }
+}
+
 .page__header-image {
     min-height: 560px;
     background-color: #030F21;
-    background-image: url("../img/dest/images/header-image-mobile.jpg");
     background-image: url("../img/dest/images/header-image-mobile.webp");
     background-repeat: no-repeat;
     background-size: cover;
@@ -240,7 +251,6 @@ img {
 
     @media (min-width: $w768) {
         min-height: 640px;
-        background-image: url("../img/dest/images/header-image768.jpg");
         background-image: url("../img/dest/images/header-image768.webp");
     }
 
@@ -250,8 +260,6 @@ img {
 
     @media (min-width: $w1024) {
         min-height: 640px;
-
-        background-image: url("../img/dest/images/header-image-1024.jpg");
         background-image: url("../img/dest/images/header-image-1024.webp");
         background-size: 65%;
         background-position: 100% 50%;
@@ -643,6 +651,60 @@ img {
 
 
     }
+}
+
+.no-webp .courses-card {
+
+    &--egs-1::after {
+        background-image: url("../img/dest/images/courses/egs-1-m.png");
+    }
+
+    &--ras-1::after {
+        background-image: url("../img/dest/images/courses/rads-1-m.png");
+    }
+
+    &--egs-2::after {
+        background-image: url("../img/dest/images/courses/egs-2-m.png");
+    }
+
+    &--ras-2:after {
+        background-image: url("../img/dest/images/courses/rads-2-m.png");
+    }
+
+    &--rtd:after {
+        background-image: url("../img/dest/images/courses/rtd-m.png");
+    }
+
+    &--assp:after {
+        background-image: url("../img/dest/images/courses/assp-m.png");
+    }
+
+    @media (min-width: $w1024) {
+        &--egs-1::after {
+            background-image: url("../img/dest/images/courses/egs-1.png");
+        }
+    
+        &--ras-1::after {
+            background-image: url("../img/dest/images/courses/rads-1.png");
+        }
+    
+        &--egs-2::after {
+            background-image: url("../img/dest/images/courses/egs-2.png");
+        }
+    
+        &--ras-2:after {
+            background-image: url("../img/dest/images/courses/rads-2.png");
+        }
+    
+        &--rtd:after {
+            background-image: url("../img/dest/images/courses/rtd.png");
+        }
+    
+        &--assp:after {
+            background-image: url("../img/dest/images/courses/assp.png");
+        }
+    }
+
 }
 
 .courses-card {
@@ -1574,6 +1636,11 @@ img {
         padding-bottom: 38px;
         display: flex;
         justify-content: space-between;
+    }
+
+    @media (min-width: $w1280) {
+        padding-top: 40px;
+        padding-bottom: 48px;
     }
 }
 
