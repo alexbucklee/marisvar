@@ -29,10 +29,12 @@ function scripts() {
     return gulp.src([
             'source/js/swiper-bundle.min.js',
             'source/js/modernizr-webp.js',
+            'source/js/photoswipe.min.js',
+            'source/js/photoswipe-ui-default.min.js',
             'source/js/script.js',
         ])
         .pipe(concat('script.min.js'))
-        // .pipe(uglify())
+        .pipe(uglify())
         .pipe(gulp.dest('source/js'))
         .pipe(sync.stream())
 }
