@@ -61,13 +61,13 @@ const swiper = new Swiper('.swiper-container', {
 
 // anchor
 
-const anchors = document.querySelectorAll('a[href*="#"]');
+let pageIndex = document.querySelector('.page-index');
+const anchors = pageIndex.querySelectorAll('a[href*="#"]');
 
 for (let anchor of anchors) (
     anchor.addEventListener('click', function(event) {
         event.preventDefault();
-
-        
+    
         if (window.innerWidth < 1024) {
             let mobileMenu = document.querySelector('.main-nav__wrapper');
             if (mobileMenu.classList.contains('main-nav__display-none')) {} else {
@@ -90,7 +90,7 @@ function showmap() {
     let standardsTop = standards.offsetTop;
 
     if (window.pageYOffset > standardsTop) {
-        map.insertAdjacentHTML('afterbegin', '<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Af12312a285cd6098f401e5e5ea4587b05d1cc7e8f27f035c07dfb8d927011d40&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>');
+        map.insertAdjacentHTML('afterbegin', '<iframe tabindex="-1" src="https://yandex.ru/map-widget/v1/?um=constructor%3Af12312a285cd6098f401e5e5ea4587b05d1cc7e8f27f035c07dfb8d927011d40&amp;source=constructor" width="100%" height="100%" frameborder="0"></iframe>');
         document.removeEventListener('scroll', showmap);
     }
 }

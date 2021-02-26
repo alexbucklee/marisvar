@@ -32,7 +32,7 @@ function scripts() {
             'source/js/script.js',
         ])
         .pipe(concat('script.min.js'))
-        .pipe(uglify())
+        // .pipe(uglify())
         .pipe(gulp.dest('source/js'))
         .pipe(sync.stream())
 }
