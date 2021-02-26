@@ -1213,6 +1213,10 @@ img {
     }
 }
 
+.license__figure {
+    margin: 0;
+}
+
 .license__wrapper {
     margin-top: 40px;
     margin-bottom: 10px;
@@ -1321,6 +1325,12 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
+
+    @media (max-width: 767.9px) {
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 
     @media (min-width: $w768) {
         flex-direction: row;
@@ -1604,7 +1614,7 @@ img {
     height: 320px;
     @media (min-width: $w768) {
         width: calc((100% - 24px * 7) / 8 * 4 + 24px * 3);
-        height: inherit;
+        height: auto;
         min-height: 480px;
     }
 
@@ -2204,7 +2214,7 @@ img {
         height: 290px;
         position: absolute;
         top: 12px;
-        left: -27px;
+        left: -28px;
 
         background-color: #B2B2B3;
 
@@ -2261,6 +2271,10 @@ img {
     
         .contacts__text {
             margin-bottom: 40px;
+
+            br {
+                display: none;
+            }
         }
     }
 
