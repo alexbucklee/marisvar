@@ -87,8 +87,6 @@ for (let anchor of anchors) (
 );
 
 function showmap() {
-    // console.log(scrollTop);
-
     let standards = document.querySelector('.standards');
     let standardsTop = standards.offsetTop;
 

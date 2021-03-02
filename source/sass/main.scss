@@ -129,10 +129,6 @@ img {
     line-height: 24px;
 
     color: rgba($color: #000000, $alpha: 0.85);
-
-    @media (min-width: $w1280) {
-        font-size: 18px;
-    }
 }
 
 .page__body {
@@ -1155,7 +1151,7 @@ img {
     }
 
     @media (min-width: $w1280) {
-        width: calc((100% - 32px * 11) / 12 * 6 + 32px * 5);
+        width: calc((100% - 32px * 11) / 12 * 5 + 32px * 5);
     }
 }
 .standards__title {
@@ -1815,7 +1811,6 @@ img {
     padding-bottom: 40px;
     position: relative;
 
-    background-image: url("../img/dest/images/courses/page-egs-1-m.webp");
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -1823,12 +1818,9 @@ img {
         padding-top: 36px;
         padding-left: 24px;
         padding-right: 24px;
-
-        background-image: url("../img/dest/images/courses/page-egs-1-768.webp");
     }
 
     @media (min-width: $w1024) {
-        background-image: url("../img/dest/images/courses/page-egs-1-1024.jpg");
         background-size: contain;
         background-position-x: calc(100% - 24px);
     }
@@ -1843,12 +1835,99 @@ img {
     }
 }
 
-.no-webp .course-page__head {
-    background-image: url("../img/dest/images/courses/page-egs-1-m.jpg");
+.course-page__head--gas-1 {
+    background-image: url("../img/dest/images/courses/page-gas-1-m.webp");
+
+    .no-webp & {
+        background-image: url("../img/dest/images/courses/page-gas-1-m.jpg");
+    }
 
     @media (min-width: $w768) {
+        background-image: url("../img/dest/images/courses/page-gas-1-768.webp");
 
-        background-image: url("../img/dest/images/courses/page-egs-1-768.jpg");
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-gas-1-768.jpg");
+        }
+    }
+
+    @media (min-width: $w1024) {
+        background-image: url("../img/dest/images/courses/page-gas-1-1024.jpg");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-gas-1-1024.jpg");
+        }
+    }
+}
+
+.course-page__head--arc-1 {
+    background-image: url("../img/dest/images/courses/page-arc-1-m.webp");
+
+    .no-webp & {
+        background-image: url("../img/dest/images/courses/page-arc-1-m.jpg");
+    }
+
+    @media (min-width: $w768) {
+        background-image: url("../img/dest/images/courses/page-arc-1-768.webp");
+    
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-arc-1-768.jpg");
+        }
+    }
+
+    @media (min-width: $w1024) {
+        background-image: url("../img/dest/images/courses/page-arc-1-1024.webp");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-arc-1-1024.jpg");
+        }
+    }
+}
+
+.course-page__head--gas-2 {
+    background-image: url("../img/dest/images/courses/page-gas-2-m.webp");
+
+    .no-webp & {
+        background-image: url("../img/dest/images/courses/page-gas-2-m.jpg");
+    }
+
+    @media (min-width: $w768) {
+        background-image: url("../img/dest/images/courses/page-gas-2-768.webp");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-gas-2-768.jpg");
+        }
+    }
+
+    @media (min-width: $w1024) {
+        background-image: url("../img/dest/images/courses/page-gas-2-1024.jpg");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-gas-2-1024.jpg");
+        }
+    }
+}
+
+.course-page__head--arc-2 {
+    background-image: url("../img/dest/images/courses/page-arc-2-m.webp");
+
+    .no-webp & {
+        background-image: url("../img/dest/images/courses/page-arc-2-m.jpg");
+    }
+
+    @media (min-width: $w768) {
+        background-image: url("../img/dest/images/courses/page-arc-2-768.webp");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-arc-2-768.jpg");
+        }
+    }
+
+    @media (min-width: $w1024) {
+        background-image: url("../img/dest/images/courses/page-arc-2-1024.jpg");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-arc-2-1024.jpg");
+        }
     }
 }
 
@@ -1877,8 +1956,20 @@ img {
     }
 }
 
-.course-page__head-wrapper {
+.course-page__head-wrapper--gas-1 {
+    background-color: #081921;
+}
+
+.course-page__head-wrapper--arc-1 {
     background-color: #020001;
+}
+
+.course-page__head-wrapper--gas-2 {
+    background-color: #2D2E30;
+}
+
+.course-page__head-wrapper--arc-2 {
+    background-color: #000;
 }
 
 .info-numbers {
@@ -1955,15 +2046,15 @@ img {
         padding-top: 16px;
         padding-bottom: 12px;
 
-        &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            right: -12px;
-            width: 1px;
-            height: 100%;
-            background-color: #d9d9d9;
-        }
+        // &::after {
+            // content: "";
+            // position: absolute;
+            // top: 0;
+            // right: -12px;
+            // width: 1px;
+            // height: 100%;
+            // background-color: #d9d9d9;
+        // }
     }
 }
 
@@ -2005,6 +2096,13 @@ img {
 
     @media (min-width: $w768) {
         display: none;
+    }
+
+    @media (min-width: $w1024) {
+        display: block;
+        height: inherit;
+        width: 1px;
+        background-color: rgba($color: #000000, $alpha: 0.15);
     }
 }
 
