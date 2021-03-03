@@ -220,6 +220,11 @@ img {
         font-size: 32px;
         line-height: 40px;
     }
+
+    @media (min-width: $w1280) {
+        font-size: 36px;
+        line-height: 44px;
+    }
 }
 
 .page__overlay {
@@ -565,6 +570,10 @@ img {
         br {
             display: inline;
         }
+    }
+
+    @media (min-width: $w1280) {
+        font-size: 18px;
     }
 }
 
@@ -1831,6 +1840,7 @@ img {
         margin-left: auto;
         margin-right: auto;
         width: 1216px;
+        min-height: 480px;
         background-position-x: calc(100% - 32px);
     }
 }
@@ -1851,10 +1861,18 @@ img {
     }
 
     @media (min-width: $w1024) {
-        background-image: url("../img/dest/images/courses/page-gas-1-1024.jpg");
+        background-image: url("../img/dest/images/courses/page-gas-1-1024.webp");
 
         .no-webp & {
             background-image: url("../img/dest/images/courses/page-gas-1-1024.jpg");
+        }
+    }
+
+    @media (min-width: $w1280) {
+        background-image: url("../img/dest/images/courses/page-gas-1-1280.webp");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-gas-1-1280.jpg");
         }
     }
 }
@@ -1881,6 +1899,14 @@ img {
             background-image: url("../img/dest/images/courses/page-arc-1-1024.jpg");
         }
     }
+
+    @media (min-width: $w1280) {
+        background-image: url("../img/dest/images/courses/page-arc-1-1280.webp");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-arc-1-1280.jpg");
+        }
+    }
 }
 
 .course-page__head--gas-2 {
@@ -1899,10 +1925,18 @@ img {
     }
 
     @media (min-width: $w1024) {
-        background-image: url("../img/dest/images/courses/page-gas-2-1024.jpg");
+        background-image: url("../img/dest/images/courses/page-gas-2-1024.webp");
 
         .no-webp & {
             background-image: url("../img/dest/images/courses/page-gas-2-1024.jpg");
+        }
+    }
+
+    @media (min-width: $w1280) {
+        background-image: url("../img/dest/images/courses/page-gas-2-1280.webp");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-gas-2-1280.jpg");
         }
     }
 }
@@ -1923,10 +1957,18 @@ img {
     }
 
     @media (min-width: $w1024) {
-        background-image: url("../img/dest/images/courses/page-arc-2-1024.jpg");
+        background-image: url("../img/dest/images/courses/page-arc-2-1024.webp");
 
         .no-webp & {
             background-image: url("../img/dest/images/courses/page-arc-2-1024.jpg");
+        }
+    }
+
+    @media (min-width: $w1280) {
+        background-image: url("../img/dest/images/courses/page-arc-2-1280.webp");
+
+        .no-webp & {
+            background-image: url("../img/dest/images/courses/page-arc-2-1280.jpg");
         }
     }
 }
@@ -1937,6 +1979,10 @@ img {
 
 .course-page__button-back {
     margin-bottom: 20px;
+
+    @media (min-width: $w1280) {
+        margin-bottom: 32px;
+    }
 }
 
 .course-page__description {
@@ -1953,6 +1999,7 @@ img {
 
     @media (min-width: $w1024) {
         font-size: 18px;
+        line-height: 28px;
     }
 }
 
@@ -2478,3 +2525,101 @@ img {
     }
 }
 
+.welding-documentation {
+    padding-top: 84px;
+    padding-bottom: 24px;
+
+    @media (min-width: $w768) {
+        display: flex;
+        justify-content: space-between;
+
+        position: relative;
+
+        &::after {
+            content: "";
+            width: 1px;
+            height: calc(100% - 96px);
+            position: absolute;
+            bottom: 24px;
+            right: 50%;
+            background-color: rgba(0,0,0,.15);
+        }
+    }
+
+    @media (min-width: $w1280) {
+        padding-top: 96px;
+        padding-bottom: 0;
+
+        &::after {
+            bottom: 0;
+        }
+    }
+}
+
+.welding-documentation__title {
+    margin: 0;
+    margin-bottom: 40px;
+
+    font-size: 18px;
+
+    @media (min-width: $w768) {
+        width: calc(100%/2 - 28px);
+
+        text-align: right;
+    }
+}
+
+.documentation-list {
+    padding-left: 16px;
+    margin: 0;
+
+    list-style: none;
+
+    @media (min-width: $w768) {
+        width: calc(100%/2 - 28px);
+    }
+}
+
+.documentation-list__item {
+    margin-bottom: 8px;
+
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 11px;
+        left: -16px;
+        height: 1.18px;
+        width: 7.83px;
+
+        background-color: rgba($color: #000000, $alpha: 0.85);
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.br-mobile {
+
+    @media (min-width: $w768) {
+        display: none;
+    }
+}
+
+.br-tablet {
+    display: none;
+
+    @media (min-width: $w768) {
+        display: inline;
+    }
+}
+
+.br-desktop {
+    display: none;
+
+    @media (min-width: $w1280) {
+        display: inline;
+    }
+}
