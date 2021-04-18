@@ -574,10 +574,6 @@ img {
             display: inline;
         }
     }
-
-    @media (min-width: $w1280) {
-        font-size: 18px;
-    }
 }
 
 .welcome__buttons-wrapper {
@@ -1998,11 +1994,6 @@ img {
         @media (min-width: $w768) {
             display: inline;
         }
-    }
-
-    @media (min-width: $w1024) {
-        font-size: 18px;
-        line-height: 28px;
     }
 }
 
